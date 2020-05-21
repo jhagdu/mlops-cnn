@@ -87,7 +87,7 @@ model.compile(loss = 'categorical_crossentropy',
 
 
 # Training Parameters
-batch_size = 32
+'''batch_size = 32
 epochs = 1
 
 history = model.fit(x_train, y_train,
@@ -101,4 +101,4 @@ model.save("CIFAR10_AlexNet_1_Epoch.h5")
 # Evaluate the performance of our trained model
 scores = model.evaluate(x_test, y_test, verbose=1)
 print('Test loss:', scores[0])
-print('Test accuracy:', scores[1])
+print('Test accuracy:', scores[1])'''
