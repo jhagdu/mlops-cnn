@@ -8,7 +8,6 @@ from keras.preprocessing.image import ImageDataGenerator
 from keras.regularizers import l2
 from keras.datasets import mnist
 from keras.utils import np_utils
-from Tuning_Model import set_kernel
 
 # Loading MNIST Dataset
 (x_train, y_train), (x_test, y_test)  = mnist.load_data()
