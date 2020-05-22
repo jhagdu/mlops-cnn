@@ -22,7 +22,6 @@ y_train = keras.utils.to_categorical(y_train, num_classes)
 y_test = keras.utils.to_categorical(y_test, num_classes)
 ...
 
-
 l2_reg = 0
 
 # Initialize model
