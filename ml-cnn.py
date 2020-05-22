@@ -111,4 +111,6 @@ print(yhat)
 '''
 # In[ ]:
 accuracy = 10
-os.system("echo '{}' | cat > /root/1-Pull-Code/result".format(accuracy))
+result_file = open("result", "w")
+result_file.write(str(accuracy))
+result_file.close()
