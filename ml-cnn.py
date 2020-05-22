@@ -1,6 +1,5 @@
 #keras
 # In[ ]:
+from os import system
 accuracy = 10
-result_file = open("result", "w+")
-result_file.write(str(accuracy))
-result_file.close()
+system("bash -c echo '{}' | cat > /root/1-Pull-Code/result".format(accuracy))
