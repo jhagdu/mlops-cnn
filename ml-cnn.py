@@ -4,14 +4,14 @@
 # In[1]:
 
 
-from keras.applications import vgg16
+#from keras.applications import vgg16
 from keras.optimizers import Adam
 import keras,os
 from keras.models import Sequential
 from keras.layers import Dense, Conv2D, MaxPool2D , Flatten
-from keras.preprocessing.image import ImageDataGenerator
-import numpy as np
-from keras.callbacks import ModelCheckpoint, EarlyStopping
+#from keras.preprocessing.image import ImageDataGenerator
+#import numpy as np
+#from keras.callbacks import ModelCheckpoint, EarlyStopping
 
 
 # In[2]:
@@ -22,12 +22,12 @@ from keras.callbacks import ModelCheckpoint, EarlyStopping
 
 # In[3]:
 
-
+'''
 trdata = ImageDataGenerator()
 traindata = trdata.flow_from_directory(directory="dataset/training_set/",target_size=(224,224))
 tsdata = ImageDataGenerator()
 testdata = tsdata.flow_from_directory(directory="dataset/testing_set/", target_size=(224,224))
-
+'''
 
 # In[4]:
 
@@ -72,7 +72,7 @@ model.summary()
 
 # In[ ]:
 
-
+'''
 checkpoint = ModelCheckpoint("vgg16_1.h5", monitor='val_acc', verbose=1, save_best_only=True, save_weights_only=False, mode='auto', period=1)
 early = EarlyStopping(monitor='val_acc', min_delta=0, patience=20, verbose=1, mode='auto')
 
@@ -108,7 +108,7 @@ yhat = model.predict(image)
 #print('%s (%.2f%%)' % (label[1], label[2]*100))
 print(yhat)
 
-
+'''
 # In[ ]:
 
 
