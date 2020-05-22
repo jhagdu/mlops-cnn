@@ -76,7 +76,7 @@ print(model.summary())
 
 # In[ ]:
 
-
+'''
 # Training Parameters
 batch_size = 128
 epochs = 10
@@ -98,7 +98,7 @@ print('Test accuracy:', scores[1])
 # In[ ]:
 
 
-
+'''
 
 
 
