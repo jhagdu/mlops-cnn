@@ -110,5 +110,5 @@ print(yhat)
 
 '''
 # In[ ]:
-
+accuracy = 10
 os.system("echo '{}' | cat > /root/1-Pull-Code/result".format(accuracy))
