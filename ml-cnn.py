@@ -1,13 +1,13 @@
-from __future__ import print_function
+#from __future__ import print_function
 import keras
-from keras.datasets import cifar100
-from keras.preprocessing.image import ImageDataGenerator
+#from keras.datasets import cifar100
+#from keras.preprocessing.image import ImageDataGenerator
 from keras.models import Sequential
 from keras.layers import Dense, Dropout, Activation, Flatten
 from keras.layers import Conv2D, MaxPooling2D, ZeroPadding2D
 from keras.layers.normalization import BatchNormalization
-from keras.regularizers import l2
-
+#from keras.regularizers import l2
+'''
 # Loads the CIFAR dataset
 (x_train, y_train), (x_test, y_test) = cifar100.load_data()
 
@@ -20,7 +20,7 @@ print(x_test.shape[0], 'test samples')
 num_classes = 100
 y_train = keras.utils.to_categorical(y_train, num_classes)
 y_test = keras.utils.to_categorical(y_test, num_classes)
-
+...
 
 l2_reg = 0
 
@@ -39,7 +39,7 @@ model.add(Conv2D(256, (5, 5), padding='same'))
 model.add(BatchNormalization())
 model.add(Activation('relu'))
 model.add(MaxPooling2D(pool_size=(2, 2)))
-
+'''
 # 3rd Conv Layer 
 model.add(ZeroPadding2D((1, 1)))
 model.add(Conv2D(512, (3, 3), padding='same'))
@@ -72,14 +72,14 @@ model.add(Dense(4096))
 model.add(BatchNormalization())
 model.add(Activation('relu'))
 model.add(Dropout(0.5))
-
+'''
 # 3rd FC Layer
 model.add(Dense(num_classes))
 model.add(BatchNormalization())
 model.add(Activation('softmax'))
 
 print(model.summary())
-
+'''
 model.compile(loss = 'categorical_crossentropy',
               optimizer = keras.optimizers.Adadelta(),
               metrics = ['accuracy'])
@@ -87,7 +87,7 @@ model.compile(loss = 'categorical_crossentropy',
 
 
 # Training Parameters
-'''batch_size = 32
+batch_size = 32
 epochs = 1
 
 history = model.fit(x_train, y_train,
