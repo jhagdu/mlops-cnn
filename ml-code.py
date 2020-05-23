@@ -88,4 +88,4 @@ model.save("mnist_LeNet.h5")
 
 # Evaluating the accuracy
 scores = model.evaluate(x_test, y_test, verbose=1)
-print(int(scores[1]))
+print(int(scores[1] * 100))
