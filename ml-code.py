@@ -6,9 +6,12 @@ from keras.datasets import mnist
 from keras.utils import np_utils
 
 # Making Command line arguments optional
+# Tweeking Model
 ker_size = 2
 batch_size_passed = 1024
 no_of_epochs = 1
+crp_count = 1
+fc_count = 1
 if len(sys.argv) == 2:
     ker_size = int(sys.argv[1])
 elif len(sys.argv) == 3:
@@ -18,6 +21,17 @@ elif len(sys.argv) == 4:
     ker_size = int(sys.argv[1])
     batch_size_passed = int(sys.argv[2])
     no_of_epochs = int(sys.argv[3])
+elif len(sys.argv) == 5:
+    ker_size = int(sys.argv[1])
+    batch_size_passed = int(sys.argv[2])
+    no_of_epochs = int(sys.argv[3])
+    crp_count = int(sys.argv[4])
+elif len(sys.argv) == 6:
+    ker_size = int(sys.argv[1])
+    batch_size_passed = int(sys.argv[2])
+    no_of_epochs = int(sys.argv[3])
+    crp_count = int(sys.argv[4])
+    fc_count = int(sys.argv[5])
 
 # Loading MNIST Dataset
 (x_train, y_train), (x_test, y_test)  = mnist.load_data()
@@ -54,15 +68,22 @@ model.add(Conv2D(20,kernel_size,padding="same",input_shape=input_shape))
 model.add(Activation("relu"))
 model.add(MaxPooling2D(pool_size=(2,2)))
 
-model.add(Conv2D(50,kernel_size,padding="same"))
-model.add(Activation("relu"))
-model.add(MaxPooling2D(pool_size=(2,2), strides=(2,2)))
-
+count = 1
+while count <= crp_count:
+    model.add(Conv2D(50,kernel_size,padding="same"))
+    model.add(Activation("relu"))
+    model.add(MaxPooling2D(pool_size=(2,2), strides=(2,2)))
+    count+=1
+    
 # FC
 model.add(Flatten())
-model.add(Dense(500))
-model.add(Activation("relu"))
 
+count = 1
+while count <= fc_count:
+    model.add(Dense(500))
+    model.add(Activation("relu"))
+    count+=1
+    
 model.add(Dense(n_classes))
 model.add(Activation("softmax"))
 
