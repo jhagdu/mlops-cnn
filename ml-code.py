@@ -1,4 +1,3 @@
-#CNN ML CODE  
 import keras, sys
 from keras.models import Sequential
 from keras.layers import Dense, Activation, Flatten
@@ -103,7 +102,7 @@ epochs = no_of_epochs
 history = model.fit(x_train, y_train,
           batch_size=batch_size,
           epochs=epochs,
-          validation_data=(x_test, y_test),
+          validation_data=(x_test, y_test), 
           shuffle=True)
 
 model.save("mnist_LeNet.h5")  
