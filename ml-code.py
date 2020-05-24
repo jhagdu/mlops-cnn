@@ -108,6 +108,6 @@ history = model.fit(x_train, y_train,
 model.save("mnist_LeNet.h5")   
 
 # Evaluating the accuracy
-scores = model.evaluate(x_test, y_test, verbose=1)
+scores = model.evaluate(x_test, y_test, verbose=1) 
 print("\nAccuracy is :-\n") 
-print(int(scores[1] * 100))
+print(int(scores[1] * 100)) 
