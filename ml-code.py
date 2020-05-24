@@ -1,4 +1,4 @@
-#CNN ML
+#CNN ML CODE  
 import keras, sys
 from keras.models import Sequential
 from keras.layers import Dense, Activation, Flatten
@@ -106,7 +106,7 @@ history = model.fit(x_train, y_train,
           validation_data=(x_test, y_test),
           shuffle=True)
 
-model.save("mnist_LeNet.h5")
+model.save("mnist_LeNet.h5")  
 
 # Evaluating the accuracy
 scores = model.evaluate(x_test, y_test, verbose=1)
