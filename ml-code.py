@@ -5,7 +5,7 @@ from keras.layers import Conv2D, MaxPooling2D
 from keras.datasets import mnist
 from keras.utils import np_utils
 
-# Making Command line arguments optional
+# Making Command line arguments optional 
 # Tweeking Model 
 ker_size = 2
 batch_size_passed = 1024
@@ -109,4 +109,5 @@ model.save("mnist_LeNet.h5")
 
 # Evaluating the accuracy
 scores = model.evaluate(x_test, y_test, verbose=1)
+print("\nAccuracy is :-\n")
 print(int(scores[1] * 100))
