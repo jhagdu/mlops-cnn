@@ -1,3 +1,4 @@
+#Changed
 import keras, sys
 from keras.models import Sequential
 from keras.layers import Dense, Activation, Flatten
@@ -76,7 +77,7 @@ while count <= crp_count:
     count+=1
     
 # FC
-model.add(Flatten())  
+model.add(Flatten())
 
 count = 1
 while count <= fc_count:
