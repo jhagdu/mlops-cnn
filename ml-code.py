@@ -85,7 +85,7 @@ while count <= fc_count:
     count+=1
     
 model.add(Dense(n_classes))
-model.add(Activation("softmax"))
+model.add(Activation("softmax")) 
 
 model.compile(loss="categorical_crossentropy", optimizer=keras.optimizers.Adadelta(),metrics=['accuracy'])
 
