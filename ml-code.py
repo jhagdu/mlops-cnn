@@ -1,4 +1,4 @@
-#Changed
+#CNN ML
 import keras, sys
 from keras.models import Sequential
 from keras.layers import Dense, Activation, Flatten
