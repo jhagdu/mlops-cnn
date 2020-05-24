@@ -76,7 +76,7 @@ while count <= crp_count:
     count+=1
     
 # FC
-model.add(Flatten())
+model.add(Flatten())  
 
 count = 1
 while count <= fc_count:
