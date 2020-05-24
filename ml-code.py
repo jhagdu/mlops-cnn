@@ -6,7 +6,7 @@ from keras.datasets import mnist
 from keras.utils import np_utils
 
 # Making Command line arguments optional
-# Tweeking Model
+# Tweeking Model 
 ker_size = 2
 batch_size_passed = 1024
 no_of_epochs = 1
